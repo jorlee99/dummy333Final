@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using AmazoomWeb.Data;
 using AmazoomWeb.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace AmazoomWeb.Controllers
 {
@@ -25,6 +26,21 @@ namespace AmazoomWeb.Controllers
             return View(await _context.Joke.ToListAsync());
         }
 
+        // GET: Dogshit/ShowSearchForm
+        public async Task<IActionResult> ShowSearchForm()
+        {
+            return View("ShowSearchForm");//find showsearchform
+        }
+
+        public async Task<IActionResult> ShowSearchResults(String SearchPhrase)
+        {
+            return View("Index",await _context.Joke.Where(j => j.JokeQuestion.Contains(SearchPhrase)).ToListAsync());//find filtered results
+
+        }
+        //public string ShowSearchResults(string SearchPhrase)
+        //{
+        //    return "You entered " + SearchPhrase;
+        //}
         // GET: Dogshit/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -44,6 +60,7 @@ namespace AmazoomWeb.Controllers
         }
 
         // GET: Dogshit/Create
+        [Authorize]
         public IActionResult Create()
         {
             return View();
@@ -52,6 +69,7 @@ namespace AmazoomWeb.Controllers
         // POST: Dogshit/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,JokeQuestion,JokeAnswer")] Joke joke)
@@ -66,6 +84,7 @@ namespace AmazoomWeb.Controllers
         }
 
         // GET: Dogshit/Edit/5
+        [Authorize]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -84,6 +103,7 @@ namespace AmazoomWeb.Controllers
         // POST: Dogshit/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,JokeQuestion,JokeAnswer")] Joke joke)
@@ -117,6 +137,7 @@ namespace AmazoomWeb.Controllers
         }
 
         // GET: Dogshit/Delete/5
+        [Authorize]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -135,6 +156,7 @@ namespace AmazoomWeb.Controllers
         }
 
         // POST: Dogshit/Delete/5
+        [Authorize]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)

@@ -18,12 +18,12 @@ namespace AmazoomWeb.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public IActionResult Index() //index page assumed
         {
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Privacy()//privacy page assumed
         {
             return View();
         }
