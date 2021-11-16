@@ -25,25 +25,25 @@ namespace AmazoomWeb
 		}
 
 		public static void movement()
-        {
-        }
+		{
+		}
 
 		public static void grabItem(Item ItemTaken)
-        {
+		{
 			if (weightCapacity + ItemTaken.weight > 3)
-            {
+			{
 				return;
-            }
-            else
-            {
+			}
+			else
+			{
 				ItemList.Add(ItemTaken);
 				weightCapacity = weightCapacity + ItemTaken.weight;
-            }
+			}
 
-        }
+		}
 		public static void loadItem()
-        {
+		{
 
-        }
+		}
 	}
 }

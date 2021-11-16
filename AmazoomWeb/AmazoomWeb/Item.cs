@@ -3,7 +3,7 @@
 
 namespace AmazoomWeb
 {
-	public static class Item
+	public class Item
 	{
 		public string name;
 		public int count;

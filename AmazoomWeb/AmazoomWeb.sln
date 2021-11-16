@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.810.11
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmazoomWeb", "AmazoomWeb\AmazoomWeb.csproj", "{7CC89055-5B4B-4C83-AFF4-7D0A5E5C3729}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmazoomWeb", "AmazoomWeb\AmazoomWeb.csproj", "{0DB1EB40-308A-4747-AC95-50A924FB5685}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7CC89055-5B4B-4C83-AFF4-7D0A5E5C3729}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7CC89055-5B4B-4C83-AFF4-7D0A5E5C3729}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7CC89055-5B4B-4C83-AFF4-7D0A5E5C3729}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7CC89055-5B4B-4C83-AFF4-7D0A5E5C3729}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DB1EB40-308A-4747-AC95-50A924FB5685}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DB1EB40-308A-4747-AC95-50A924FB5685}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DB1EB40-308A-4747-AC95-50A924FB5685}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DB1EB40-308A-4747-AC95-50A924FB5685}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {3EDD32BA-66B8-40A9-8FA7-513269A6ECDE}
+		SolutionGuid = {0DDD117E-0DFE-4490-B599-53480FFCB1C8}
 	EndGlobalSection
 EndGlobal
